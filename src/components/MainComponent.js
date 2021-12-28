@@ -5,6 +5,7 @@ import Header from "./HeaderComponent";
 import Footer from "./FooterComoponent";
 import Contact from "./ContactComponent";
 import Home from "./HomeComopnent";
+import About from "./AboutComponent";
 import {
   Switch,
   Route,
@@ -23,6 +24,7 @@ class Main extends Component {
       comments: COMMENTS,
       partners: PARTNERS,
       promotions: PROMOTIONS,
+      partners: PARTNERS,
     };
   }
 
@@ -68,6 +70,11 @@ class Main extends Component {
           />
           <Route path="/directory/:campsiteId" component={CampsiteWithId} />
           <Route exact path="/contactus" component={Contact} />
+          <Route
+            exact
+            path="/aboutus"
+            render={() => <About partners={this.state.partners} />}
+          />
           <Redirect to="/home" />
         </Switch>
         <Footer />
