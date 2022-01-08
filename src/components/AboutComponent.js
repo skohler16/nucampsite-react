@@ -7,7 +7,6 @@ import {
   CardHeader,
   Media,
 } from "reactstrap";
-import { PARTNERS } from "../shared/partners";
 import { Link } from "react-router-dom";
 
 function About(props) {
