@@ -93,6 +93,7 @@ export const postComment = (campsiteId, rating, author, text) => (dispatch) => {
     method: "POST",
     body: JSON.stringify(newComment),
     headers: {
+      "content-Type": "application/json",
     },
   })
     .then(
