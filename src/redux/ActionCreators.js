@@ -87,7 +87,11 @@ export const postComment = (campsiteId, rating, author, text) => (dispatch) => {
     author: author,
     text: text,
   };
+<<<<<<< Updated upstream
   newComment.date = new Date().toISOString();
+=======
+  newComment.date = new (Date().toISOString)();
+>>>>>>> Stashed changes
 
   return fetch(baseURL + "comments", {
     method: "POST",
